@@ -15,11 +15,11 @@ const SectionOne = () => {
 `;
 
   const Header = styled.h1`
-    width: 70%;
+    width: 75%;
     color: white;
     font-family: inter;
     font-weight: 600;
-    font-size: 8rem;
+    font-size: 8.4rem;
   `;
   return (
     <SectionOneImage>
