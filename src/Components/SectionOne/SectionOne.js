@@ -11,6 +11,7 @@ const SectionOne = () => {
     display: flex;
     justify-content: center;
     align-items: center;
+
 `;
 
   const Header = styled.h1`
