@@ -9,10 +9,9 @@ const Navbar = () => {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 2rem 2rem;
+    padding: 2.5rem 2rem;
     box-sizing: border-box;
-
-    `;
+  `;
   const Left = styled.div`
     display: flex;
     justify-content: center;
@@ -22,6 +21,7 @@ const Navbar = () => {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
   `;
   const Name = styled.h2`
     color: black;
@@ -31,12 +31,10 @@ const Navbar = () => {
     <NavbarContainer>
       <Left>
         <Name>Pearson Lloyd</Name>
-        <MagnifyingGlassIcon style={{color: "white", fontSize: "1rem"}}/>
       </Left>
       <Right>
-      <Name>Pearson Lloyd</Name>
-
-        <Bars3Icon />
+        <MagnifyingGlassIcon style={{ height: "40px", width: "40px" }} />
+        <Bars3Icon style={{ height: "40px", width: "40px" }} />
       </Right>
     </NavbarContainer>
   );
