@@ -5,17 +5,16 @@ const SectionOne = () => {
   //STYLES
   const SectionOneImage = styled.div`
     height: 100vh;
-    width: 100wv;
+    background-position: 50%;
+    background-size: cover;
     background-image: url("https://pearsonlloyd.com/wp-content/uploads/2022/09/HOMEPAGE-6.jpg");
-    position: relative;
-  `;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
 
   const Header = styled.h1`
-    width: 100%;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 70%;
     color: white;
     font-family: inter;
     font-weight: 600;
