@@ -1,10 +1,9 @@
 import './App.css';
+import SectionOne from './Components/SectionOne/SectionOne';
 
 function App() {
   return (
-    <div className="App">
-      Hello World
-    </div>
+    <SectionOne />
   );
 }
 
