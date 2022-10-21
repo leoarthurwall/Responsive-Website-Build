@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import "../../App.css";
 
 const ProjectContainer = styled.div`
   height: 642px;
@@ -10,6 +11,21 @@ const ProjectContainer = styled.div`
   align-items: center;
   overflow: hidden;
   margin-top: 15px;
+  position: relative;
+  gap: 1rem;
+`;
+
+const ProjectClient = styled.h1`
+  color: white;
+  font-family: Prompt;
+  font-weight: 500;
+  font-size: 3.4rem;
+`;
+const ProjectName = styled.h1`
+  color: white;
+  font-family: Prompt;
+  font-weight: 200;
+  font-size: 3.4rem;
 `;
 
 const SectionThree = () => {
@@ -50,7 +66,10 @@ const SectionThree = () => {
     <>
       <ProjectContainer
         style={{ backgroundImage: `url(${Project[0].bgImage})` }}
-      ></ProjectContainer>
+      >
+        <ProjectClient>{Project[0].Client} </ProjectClient>
+        <ProjectName>{Project[0].Name}</ProjectName>
+      </ProjectContainer>
       <ProjectContainer
         style={{ backgroundImage: `url(${Project[1].bgImage})` }}
       ></ProjectContainer>
