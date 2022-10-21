@@ -72,16 +72,28 @@ const SectionThree = () => {
       </ProjectContainer>
       <ProjectContainer
         style={{ backgroundImage: `url(${Project[1].bgImage})` }}
-      ></ProjectContainer>
+      >
+        <ProjectClient>{Project[1].Client} </ProjectClient>
+        <ProjectName>{Project[1].Name}</ProjectName>
+      </ProjectContainer>
       <ProjectContainer
         style={{ backgroundImage: `url(${Project[2].bgImage})` }}
-      ></ProjectContainer>
+      >
+        <ProjectClient>{Project[2].Client} </ProjectClient>
+        <ProjectName>{Project[2].Name}</ProjectName>
+      </ProjectContainer>
       <ProjectContainer
         style={{ backgroundImage: `url(${Project[3].bgImage})` }}
-      ></ProjectContainer>
+      >
+        <ProjectClient>{Project[3].Client} </ProjectClient>
+        <ProjectName>{Project[3].Name}</ProjectName>
+      </ProjectContainer>
       <ProjectContainer
         style={{ backgroundImage: `url(${Project[4].bgImage})` }}
-      ></ProjectContainer>
+      >
+        <ProjectClient>{Project[4].Client} </ProjectClient>
+        <ProjectName>{Project[4].Name}</ProjectName>
+      </ProjectContainer>
     </>
   );
 };
