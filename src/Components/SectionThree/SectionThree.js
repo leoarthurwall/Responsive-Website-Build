@@ -24,7 +24,7 @@ const SectionThree = () => {
       Client: "LDF 2022",
       Name: "Change Making",
       bgImage:
-        "https://pearsonlloyd.com/wp-content/uploads/2022/08/AVRO-TILE.png",
+        "https://pearsonlloyd.com/wp-content/uploads/2022/09/LDF-tile-image1-pdf.jpg",
     },
     {
       Client: "Profim",
@@ -53,6 +53,15 @@ const SectionThree = () => {
       ></ProjectContainer>
       <ProjectContainer
         style={{ backgroundImage: `url(${Project[1].bgImage})` }}
+      ></ProjectContainer>
+      <ProjectContainer
+        style={{ backgroundImage: `url(${Project[2].bgImage})` }}
+      ></ProjectContainer>
+      <ProjectContainer
+        style={{ backgroundImage: `url(${Project[3].bgImage})` }}
+      ></ProjectContainer>
+      <ProjectContainer
+        style={{ backgroundImage: `url(${Project[4].bgImage})` }}
       ></ProjectContainer>
     </>
   );
