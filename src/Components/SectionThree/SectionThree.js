@@ -1,22 +1,30 @@
 import styled from "styled-components";
 
-const SectionThreeImage = styled.div`
-height: 100vh;
-background-position: 50%;
-background-size: cover;
-position: relative;
-background-image: url('https://pearsonlloyd.com/wp-content/uploads/2022/10/EDGE-FREE-TILE-1540X1236.jpg');
-display: flex;
-justify-content: center;
-align-items: center;
-
+const ProjectContainer = styled.div`
+  height: 642px;
+  background-position: 50%;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 `;
 
-
 const SectionThree = () => {
-  return (
-    <SectionThreeImage></SectionThreeImage>
-  )
-}
+  const Project = [
+    {
+      Name: "one",
+      bgImage:
+        "https://pearsonlloyd.com/wp-content/uploads/2022/10/EDGE-FREE-TILE-1540X1236.jpg",
+    },
+  ];
 
-export default SectionThree
+  return (
+    <ProjectContainer
+      style={{ backgroundImage: `url(${Project[0].bgImage})` }}
+    ></ProjectContainer>
+  );
+};
+
+export default SectionThree;
