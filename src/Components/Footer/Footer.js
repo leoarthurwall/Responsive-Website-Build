@@ -5,16 +5,13 @@ const FooterContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #9bad97;
-  height: 50px;
   width: 100vw;
   padding: 0 10rem;
   box-sizing: border-box;
-
 `;
 const FooterSubContainer = styled.div`
   display: flex;
   width: 100%;
-
 
   justify-content: space-between;
   align-items: center;
@@ -25,14 +22,30 @@ const FooterText = styled.p`
   color: #fff;
 `;
 
+const UList = styled.ul`
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+`;
+const ListItem = styled.li`
+  font-family: inter;
+  color: #fff;
+`;
 const Footer = () => {
   return (
     <FooterContainer>
       <FooterSubContainer>
-        <FooterText>FooterText</FooterText>
+        <FooterText>Pearson Lloyd</FooterText>
       </FooterSubContainer>
       <FooterSubContainer>
-        <FooterText>FooterText</FooterText>
+        <UList>
+            <ListItem>Work</ListItem>
+            <ListItem>News</ListItem>
+            <ListItem>Recognition</ListItem>
+            <ListItem>Press</ListItem>
+            <ListItem>Jobs</ListItem>
+            <ListItem>Contact</ListItem>
+        </UList>
       </FooterSubContainer>
       <FooterSubContainer>
         <FooterText>FooterText</FooterText>
