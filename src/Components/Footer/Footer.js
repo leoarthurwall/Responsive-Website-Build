@@ -37,6 +37,8 @@ const UList = styled.ul`
   list-style-type: none;
   padding: 0;
   margin: 0;
+  line-height: 25px;
+  font-weight: bold;
 `;
 const ListItem = styled.li`
   font-family: inter;
@@ -58,7 +60,7 @@ const Footer = () => {
         <FooterHeader>Pearson Lloyd</FooterHeader>
       </FooterSubContainer>
       <FooterSubContainer>
-        <UList>
+        <UList >
           <ListItem>Work</ListItem>
           <ListItem>News</ListItem>
           <ListItem>Recognition</ListItem>
