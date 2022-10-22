@@ -11,11 +11,11 @@ const NavbarContainer = styled.div`
   width: 100%;
   padding: 2.5rem 2rem;
   box-sizing: border-box;
-  transition: 1s ease;
+  transition: 0.5s ease;
 
   &.active {
     background-color: white;
-    padding: 1rem 2rem;
+    padding: 0.8rem 2rem;
   }
 `;
 
