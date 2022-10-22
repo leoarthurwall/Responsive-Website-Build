@@ -22,12 +22,17 @@ const ProjectImage = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   transition: all 0.5s;
+
+
   &:hover {
-    transform: scale(1.05);
+    opacity: 0.5;
+    transform: scale(1.15);
+    background-color: rgba(38, 166, 145, 0.75);
+
   }
 `;
 const ProjectName = styled.h2`
-position: absolute;
+  position: absolute;
   color: white;
   font-family: Prompt;
   font-weight: 200;
@@ -37,7 +42,7 @@ const ViewAll = styled.h2`
   font-size:30px;
   text-align:center;
   font-family: inter tight;
-  margin 59px 0;
+  margin: 59px 0;
 `;
 
 const SectionThree = () => {
@@ -82,7 +87,10 @@ const SectionThree = () => {
             <ProjectImage
               style={{ backgroundImage: `url(${project.bgImage})` }}
             />
-              <ProjectName><span style={{fontWeight: "600"}}>{project.Client}</span> {project.Name}</ProjectName>
+            <ProjectName>
+              <span style={{ fontWeight: "600" }}>{project.Client}</span>{" "}
+              {project.Name}
+            </ProjectName>
           </ProjectContainer>
         );
       })}
