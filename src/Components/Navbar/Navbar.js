@@ -18,11 +18,11 @@ const Navbar = () => {
     width: 100%;
     padding: 2.5rem 2rem;
     box-sizing: border-box;
-    transition: all ease 0.85s;
-  `;
-  const ActiveNavbarContainer = styled(NavbarContainer)`
-    background-color: white;
-    padding 1rem 2rem;
+    transition: 1s ease;
+    &.active {
+      background-color: white;
+      padding: 1rem 2rem;
+    }
   `;
 
   const Left = styled.div`
@@ -43,42 +43,31 @@ const Navbar = () => {
   `;
 
   const changeBackground = () => {
-    console.log(window.scrollY)
+    console.log(window.scrollY);
     if (window.scrollY > 0) {
-      setScrollOffset(true)
+      setScrollOffset(true);
     } else {
-      setScrollOffset(false)
+      setScrollOffset(false);
     }
-  }
+  };
   useEffect(() => {
-    changeBackground()
+    changeBackground();
     // adding the event when scroll change background
-    window.addEventListener("scroll", changeBackground)
-  })
+    window.addEventListener("scroll", changeBackground);
+  });
 
   return (
-    <Nav> 
-      {scrollOffset ? (
-        <ActiveNavbarContainer>
-          <Left>
-            <Name>Pearson Lloyd</Name>
-          </Left>
-          <Right>
-            <MagnifyingGlassIcon style={{ height: "40px", width: "40px" }} />
-            <Bars3Icon style={{ height: "40px", width: "40px" }} />
-          </Right>
-        </ActiveNavbarContainer>
-      ) : (
-        <NavbarContainer>
-          <Left>
-            <Name>Pearson Lloyd</Name>
-          </Left>
-          <Right>
-            <MagnifyingGlassIcon style={{ height: "40px", width: "40px" }} />
-            <Bars3Icon style={{ height: "40px", width: "40px" }} />
-          </Right>
-        </NavbarContainer>
-      )}
+    <Nav>
+      <NavbarContainer className={scrollOffset ? "active" : ""}>
+
+        <Left>
+          <Name>Pearson Lloyd</Name>
+        </Left>
+        <Right>
+          <MagnifyingGlassIcon style={{ height: "40px", width: "40px" }} />
+          <Bars3Icon style={{ height: "40px", width: "40px" }} />
+        </Right>
+      </NavbarContainer>
     </Nav>
   );
 };
