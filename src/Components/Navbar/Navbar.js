@@ -3,7 +3,7 @@ import { MagnifyingGlassIcon, Bars3Icon } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
   const NavbarContainer = styled.div`
-    position: absolute;
+    position: fixed;
     top: 0;
     display: flex;
     justify-content: space-between;
@@ -11,7 +11,14 @@ const Navbar = () => {
     width: 100%;
     padding: 2.5rem 2rem;
     box-sizing: border-box;
+    transition: all ease 0.85s;
   `;
+  const ActiveNavbarContainer = styled(NavbarContainer)`
+    background-color: white;
+    padding 1rem 2rem;
+    position: sticky;
+  `;
+
   const Left = styled.div`
     display: flex;
     justify-content: center;
@@ -28,16 +35,24 @@ const Navbar = () => {
     margin: 0;
     font-family: inter;
   `;
+
+  const offset = window.pageYOffset;
   return (
-    <NavbarContainer>
-      <Left>
-        <Name>Pearson Lloyd</Name>
-      </Left>
-      <Right>
-        <MagnifyingGlassIcon style={{ height: "40px", width: "40px" }} />
-        <Bars3Icon style={{ height: "40px", width: "40px" }} />
-      </Right>
-    </NavbarContainer>
+    <>
+      {offset > 75 ? (
+        <ActiveNavbarContainer />
+      ) : (
+        <NavbarContainer>
+          <Left>
+            <Name>Pearson Lloyd</Name>
+          </Left>
+          <Right>
+            <MagnifyingGlassIcon style={{ height: "40px", width: "40px" }} />
+            <Bars3Icon style={{ height: "40px", width: "40px" }} />
+          </Right>
+        </NavbarContainer>
+      )}
+    </>
   );
 };
 
