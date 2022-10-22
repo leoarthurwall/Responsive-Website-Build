@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { MagnifyingGlassIcon, Bars3Icon } from "@heroicons/react/24/solid";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
-  const [scrollOffset, setScrollOffset] = useState(0);
+  const [scrollOffset, setScrollOffset] = useState(false);
 
-  const Nav = styled.div`
+  const Nav = styled.nav`
     width: 100%;
   `;
   const NavbarContainer = styled.div`
@@ -42,15 +42,23 @@ const Navbar = () => {
     font-family: inter;
   `;
 
-  const handleOffset = (e) => {
-    const position = window.pageYOffset;
-    setScrollOffset(position);
-    console.log(position)
-  };
+  const changeBackground = () => {
+    console.log(window.scrollY)
+    if (window.scrollY > 0) {
+      setScrollOffset(true)
+    } else {
+      setScrollOffset(false)
+    }
+  }
+  useEffect(() => {
+    changeBackground()
+    // adding the event when scroll change background
+    window.addEventListener("scroll", changeBackground)
+  })
 
   return (
-    <Nav onChange={handleOffset}>
-      {scrollOffset > 0 ? (
+    <Nav> 
+      {scrollOffset ? (
         <ActiveNavbarContainer>
           <Left>
             <Name>Pearson Lloyd</Name>
