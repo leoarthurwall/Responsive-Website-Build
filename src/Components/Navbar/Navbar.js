@@ -1,10 +1,17 @@
 import styled from "styled-components";
 import { MagnifyingGlassIcon, Bars3Icon } from "@heroicons/react/24/solid";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [scrollOffset, setScrollOffset] = useState(0);
+
+  const Nav = styled.div`
+    width: 100%;
+  `;
   const NavbarContainer = styled.div`
     position: fixed;
     top: 0;
+    z-index: 50;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,15 +42,15 @@ const Navbar = () => {
     font-family: inter;
   `;
 
-  const offset = window.pageYOffset;
-  console.log(offset)
-  return (
-    <>
-    
-    
-      
+  const handleOffset = (e) => {
+    const position = window.pageYOffset;
+    setScrollOffset(position);
+    console.log(position)
+  };
 
-      {offset > 0 ? (
+  return (
+    <Nav onChange={handleOffset}>
+      {scrollOffset > 0 ? (
         <ActiveNavbarContainer>
           <Left>
             <Name>Pearson Lloyd</Name>
@@ -64,7 +71,7 @@ const Navbar = () => {
           </Right>
         </NavbarContainer>
       )}
-    </>
+    </Nav>
   );
 };
 
