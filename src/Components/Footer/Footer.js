@@ -1,4 +1,10 @@
 import styled from "styled-components";
+import {
+  GrFacebookOption,
+  GrInstagram,
+  GrTwitter,
+  GrLinkedinOption,
+} from "react-icons/gr";
 
 const FooterContainer = styled.div`
   display: flex;
@@ -11,8 +17,14 @@ const FooterContainer = styled.div`
 const FooterSubContainer = styled.div`
   display: flex;
   width: 100%;
-
+  flex-direction: column;
   justify-content: space-between;
+  text-align: left;
+`;
+const FooterSubContainerLast = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
   text-align: left;
 `;
 const FooterHeader = styled.h2`
@@ -31,9 +43,12 @@ const ListItem = styled.li`
   color: #fff;
 `;
 const IconContainer = styled.div`
+  margin-top: 25px;
   display: flex;
   align-items: center;
-  justify-content: srart;
+  justify-content: left;
+  color: #fff;
+  gap: 0.2rem;
 `;
 
 const Footer = () => {
@@ -61,13 +76,18 @@ const Footer = () => {
           <ListItem>info@pearsonlloyd.com</ListItem>
         </UList>
       </FooterSubContainer>
-      <FooterSubContainer>
+      <FooterSubContainerLast>
         <UList>
           <ListItem> Pearson Lloyd Design Ltd</ListItem>
           <ListItem>Registered No 4579758</ListItem>
         </UList>
-        <IconContainer></IconContainer>
-      </FooterSubContainer>
+        <IconContainer>
+          <GrInstagram size={24} />
+          <GrTwitter size={24} />
+          <GrFacebookOption size={24} />
+          <GrLinkedinOption size={24} />
+        </IconContainer>
+      </FooterSubContainerLast>
     </FooterContainer>
   );
 };
