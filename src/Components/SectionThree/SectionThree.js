@@ -24,10 +24,16 @@ const ProjectImage = styled.div`
   transition: all 0.5s;
 
 
+
+
   &:hover {
-    opacity: 0.5;
     transform: scale(1.15);
-    background-color: rgba(38, 166, 145, 0.75);
+    background-blend-mode: overlay;
+    background-color: #ad7252;
+    opacity: 0.75;
+
+
+
 
   }
 `;
