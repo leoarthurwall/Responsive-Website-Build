@@ -16,7 +16,6 @@ const Navbar = () => {
   const ActiveNavbarContainer = styled(NavbarContainer)`
     background-color: white;
     padding 1rem 2rem;
-    position: sticky;
   `;
 
   const Left = styled.div`
@@ -37,10 +36,23 @@ const Navbar = () => {
   `;
 
   const offset = window.pageYOffset;
+  console.log(offset)
   return (
     <>
-      {offset > 75 ? (
-        <ActiveNavbarContainer />
+    
+    
+      
+
+      {offset > 0 ? (
+        <ActiveNavbarContainer>
+          <Left>
+            <Name>Pearson Lloyd</Name>
+          </Left>
+          <Right>
+            <MagnifyingGlassIcon style={{ height: "40px", width: "40px" }} />
+            <Bars3Icon style={{ height: "40px", width: "40px" }} />
+          </Right>
+        </ActiveNavbarContainer>
       ) : (
         <NavbarContainer>
           <Left>
