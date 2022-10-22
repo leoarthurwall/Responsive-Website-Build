@@ -7,7 +7,6 @@ const FooterContainer = styled.div`
   width: 100vw;
   padding: 37px 10rem 133px 10rem;
   box-sizing: border-box;
-
 `;
 const FooterSubContainer = styled.div`
   display: flex;
@@ -16,11 +15,10 @@ const FooterSubContainer = styled.div`
   justify-content: space-between;
   text-align: left;
 `;
-const FooterText = styled.p`
+const FooterHeader = styled.h2`
   font-family: inter;
   color: #fff;
   margin: 0;
-
 `;
 
 const UList = styled.ul`
@@ -32,11 +30,17 @@ const ListItem = styled.li`
   font-family: inter;
   color: #fff;
 `;
+const IconContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: srart;
+`;
+
 const Footer = () => {
   return (
     <FooterContainer>
       <FooterSubContainer>
-        <FooterText>Pearson Lloyd</FooterText>
+        <FooterHeader>Pearson Lloyd</FooterHeader>
       </FooterSubContainer>
       <FooterSubContainer>
         <UList>
@@ -58,7 +62,11 @@ const Footer = () => {
         </UList>
       </FooterSubContainer>
       <FooterSubContainer>
-        <FooterText>FooterText</FooterText>
+        <UList>
+          <ListItem> Pearson Lloyd Design Ltd</ListItem>
+          <ListItem>Registered No 4579758</ListItem>
+        </UList>
+        <IconContainer></IconContainer>
       </FooterSubContainer>
     </FooterContainer>
   );
