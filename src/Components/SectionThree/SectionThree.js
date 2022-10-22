@@ -26,14 +26,8 @@ const ProjectImage = styled.div`
     transform: scale(1.05);
   }
 `;
-
-const ProjectClient = styled.h2`
-  color: white;
-  font-family: Prompt;
-  font-weight: 500;
-  font-size: 3.4rem;
-`;
 const ProjectName = styled.h2`
+position: absolute;
   color: white;
   font-family: Prompt;
   font-weight: 200;
@@ -88,8 +82,7 @@ const SectionThree = () => {
             <ProjectImage
               style={{ backgroundImage: `url(${project.bgImage})` }}
             />
-            {/* <ProjectClient>{project.Client} </ProjectClient>
-            <ProjectName>{project.Name}</ProjectName> */}
+              <ProjectName><span style={{fontWeight: "600"}}>{project.Client}</span> {project.Name}</ProjectName>
           </ProjectContainer>
         );
       })}
