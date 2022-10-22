@@ -3,9 +3,8 @@ import "../../App.css";
 
 const ProjectContainer = styled.div`
   height: 642px;
-  max-width: 100v;
+  max-width: 100vw;
   background-position: 50%;
-  background-size: cover;
   position: relative;
   display: flex;
   justify-content: center;
@@ -89,8 +88,8 @@ const SectionThree = () => {
             <ProjectImage
               style={{ backgroundImage: `url(${project.bgImage})` }}
             />
-            <ProjectClient>{project.Client} </ProjectClient>
-            <ProjectName>{project.Name}</ProjectName>
+            {/* <ProjectClient>{project.Client} </ProjectClient>
+            <ProjectName>{project.Name}</ProjectName> */}
           </ProjectContainer>
         );
       })}
