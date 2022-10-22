@@ -52,7 +52,7 @@ const IconContainer = styled.div`
   align-items: center;
   justify-content: left;
   color: #fff;
-  gap: 0.2rem;
+  gap: 0.1rem;
 `;
 
 const Footer = () => {
@@ -86,7 +86,7 @@ const Footer = () => {
           <ListItem>Registered No 4579758</ListItem>
         </UList>
         <IconContainer>
-          <GrInstagram size={22} />
+          <GrInstagram  style={{"margin-right": "0.4rem"}} size={22} />
           <GrTwitter size={24} />
           <GrFacebookOption size={24} />
           <GrLinkedinOption size={24} />
