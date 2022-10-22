@@ -28,9 +28,9 @@ const ProjectName = styled.h2`
   font-size: 3.4rem;
 `;
 const ViewAll = styled.h2`
-  font-size:32px;
+  font-size:30px;
   text-align:center;
-  font-family: inter;
+  font-family: inter tight;
   margin 59px 0;
 `
 
@@ -82,7 +82,7 @@ const SectionThree = () => {
           </ProjectContainer>
         );
       })}
-      <ViewAll>View All</ViewAll>
+      <ViewAll>View all</ViewAll>
     </>
   );
 };
