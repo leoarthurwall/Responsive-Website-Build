@@ -15,18 +15,24 @@ const ProjectContainer = styled.div`
   gap: 1rem;
 `;
 
-const ProjectClient = styled.h1`
+const ProjectClient = styled.h2`
   color: white;
   font-family: Prompt;
   font-weight: 500;
   font-size: 3.4rem;
 `;
-const ProjectName = styled.h1`
+const ProjectName = styled.h2`
   color: white;
   font-family: Prompt;
   font-weight: 200;
   font-size: 3.4rem;
 `;
+const ViewAll = styled.h2`
+  font-size:32px;
+  text-align:center;
+  font-family: inter;
+`
+
 
 const SectionThree = () => {
   const Project = [
@@ -75,6 +81,7 @@ const SectionThree = () => {
           </ProjectContainer>
         );
       })}
+      <ViewAll>View All</ViewAll>
     </>
   );
 };

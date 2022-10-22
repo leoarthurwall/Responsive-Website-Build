@@ -26,6 +26,7 @@ const Navbar = () => {
   const Name = styled.h2`
     color: black;
     margin: 0;
+    font-family: inter;
   `;
   return (
     <NavbarContainer>

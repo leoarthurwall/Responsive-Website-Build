@@ -15,7 +15,7 @@ const SectionOne = () => {
 `;
 
   const Header = styled.h1`
-    width: 75%;
+    width: 90%;
     color: white;
     font-family: inter;
     font-weight: 600;
