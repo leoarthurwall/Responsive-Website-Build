@@ -26,6 +26,7 @@ const FooterSubContainerLast = styled.div`
   width: 100%;
   flex-direction: column;
   text-align: left;
+
 `;
 const FooterHeader = styled.h2`
   font-family: inter;
@@ -38,10 +39,11 @@ const UList = styled.ul`
   padding: 0;
   margin: 0;
   line-height: 25px;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 18px;
 `;
 const ListItem = styled.li`
-  font-family: inter;
+  font-family: inter tight;
   color: #fff;
 `;
 const IconContainer = styled.div`
@@ -74,7 +76,7 @@ const Footer = () => {
           <ListItem>1-3 Yorkton Street</ListItem>
           <ListItem>London E2 8NH</ListItem>
           <ListItem> +44 (0)20 7033 4440 </ListItem>
-          <ListItem>http://www.yorktonworkshops.com/</ListItem>
+          <ListItem>Yorkton Workshops</ListItem>
           <ListItem>info@pearsonlloyd.com</ListItem>
         </UList>
       </FooterSubContainer>
@@ -84,7 +86,7 @@ const Footer = () => {
           <ListItem>Registered No 4579758</ListItem>
         </UList>
         <IconContainer>
-          <GrInstagram size={24} />
+          <GrInstagram size={22} />
           <GrTwitter size={24} />
           <GrFacebookOption size={24} />
           <GrLinkedinOption size={24} />
