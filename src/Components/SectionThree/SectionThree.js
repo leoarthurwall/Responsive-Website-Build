@@ -64,36 +64,17 @@ const SectionThree = () => {
 
   return (
     <>
-      <ProjectContainer
-        style={{ backgroundImage: `url(${Project[0].bgImage})` }}
-      >
-        <ProjectClient>{Project[0].Client} </ProjectClient>
-        <ProjectName>{Project[0].Name}</ProjectName>
-      </ProjectContainer>
-      <ProjectContainer
-        style={{ backgroundImage: `url(${Project[1].bgImage})` }}
-      >
-        <ProjectClient>{Project[1].Client} </ProjectClient>
-        <ProjectName>{Project[1].Name}</ProjectName>
-      </ProjectContainer>
-      <ProjectContainer
-        style={{ backgroundImage: `url(${Project[2].bgImage})` }}
-      >
-        <ProjectClient>{Project[2].Client} </ProjectClient>
-        <ProjectName>{Project[2].Name}</ProjectName>
-      </ProjectContainer>
-      <ProjectContainer
-        style={{ backgroundImage: `url(${Project[3].bgImage})` }}
-      >
-        <ProjectClient>{Project[3].Client} </ProjectClient>
-        <ProjectName>{Project[3].Name}</ProjectName>
-      </ProjectContainer>
-      <ProjectContainer
-        style={{ backgroundImage: `url(${Project[4].bgImage})` }}
-      >
-        <ProjectClient>{Project[4].Client} </ProjectClient>
-        <ProjectName>{Project[4].Name}</ProjectName>
-      </ProjectContainer>
+      {Project.map((project, i) => {
+        return (
+          <ProjectContainer
+            key={i}
+            style={{ backgroundImage: `url(${project.bgImage})` }}
+          >
+            <ProjectClient>{project.Client} </ProjectClient>
+            <ProjectName>{project.Name}</ProjectName>
+          </ProjectContainer>
+        );
+      })}
     </>
   );
 };
