@@ -14,15 +14,15 @@ const ProjectContainer = styled.div`
   margin-top: 15px;
   position: relative;
   gap: 1rem;
+`;
+
+const ProjectImage = styled.div`
+  width: 100%;
+  height: 100%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   transition: all 0.5s;
-
-  const ProjectImage = styled.div`
-  
-  `
-
   &:hover {
     transform: scale(1.05);
   }
@@ -85,10 +85,10 @@ const SectionThree = () => {
     <>
       {Project.map((project, i) => {
         return (
-          <ProjectContainer
-            key={i}
-            style={{ backgroundImage: `url(${project.bgImage})` }}
-          >
+          <ProjectContainer key={i}>
+            <ProjectImage
+              style={{ backgroundImage: `url(${project.bgImage})` }}
+            />
             <ProjectClient>{project.Client} </ProjectClient>
             <ProjectName>{project.Name}</ProjectName>
           </ProjectContainer>
