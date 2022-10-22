@@ -8,8 +8,8 @@ import Footer from "./Components/Footer/Footer";
 function App() {
   return (
     <>
-      <SectionOne />
       <Navbar />
+      <SectionOne />
       <SectionTwo />
       <SectionThree />
       <Footer />
