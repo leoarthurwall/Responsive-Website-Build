@@ -7,7 +7,7 @@ const FooterContainer = styled.div`
   background-color: #9bad97;
   height: 50px;
   width: 100vw;
-  padding: 0 7rem;
+  padding: 0 10rem;
   box-sizing: border-box;
 
 `;
