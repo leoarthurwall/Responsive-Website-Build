@@ -39,16 +39,22 @@ const Footer = () => {
       </FooterSubContainer>
       <FooterSubContainer>
         <UList>
-            <ListItem>Work</ListItem>
-            <ListItem>News</ListItem>
-            <ListItem>Recognition</ListItem>
-            <ListItem>Press</ListItem>
-            <ListItem>Jobs</ListItem>
-            <ListItem>Contact</ListItem>
+          <ListItem>Work</ListItem>
+          <ListItem>News</ListItem>
+          <ListItem>Recognition</ListItem>
+          <ListItem>Press</ListItem>
+          <ListItem>Jobs</ListItem>
+          <ListItem>Contact</ListItem>
         </UList>
       </FooterSubContainer>
       <FooterSubContainer>
-        <FooterText>FooterText</FooterText>
+        <UList>
+          <ListItem>1-3 Yorkton Street</ListItem>
+          <ListItem>London E2 8NH</ListItem>
+          <ListItem> +44 (0)20 7033 4440 </ListItem>
+          <ListItem>http://www.yorktonworkshops.com/</ListItem>
+          <ListItem>info@pearsonlloyd.com</ListItem>
+        </UList>
       </FooterSubContainer>
       <FooterSubContainer>
         <FooterText>FooterText</FooterText>
