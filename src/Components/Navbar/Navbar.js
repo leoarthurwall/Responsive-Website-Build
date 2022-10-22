@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { MagnifyingGlassIcon, Bars3Icon } from "@heroicons/react/24/solid";
 import { useState, useEffect } from "react";
+import NavMenu from "./NavMenu/NavMenu";
 
 const NavbarContainer = styled.div`
   position: fixed;
@@ -57,17 +58,20 @@ const Navbar = () => {
     }
   }, [offset]);
 
-
   return (
-    <NavbarContainer className={isUpper ? "active" : ""}>
-      <Left>
-        <Name>Pearson Lloyd</Name>
-      </Left>
-      <Right>
-        <MagnifyingGlassIcon style={{ height: "40px", width: "40px" }} />
-        <Bars3Icon style={{ height: "40px", width: "40px" }} />
-      </Right>
-    </NavbarContainer>
+    <>
+      <NavbarContainer className={isUpper ? "active" : ""}>
+        <Left>
+          <Name>Pearson Lloyd</Name>
+        </Left>
+        <Right>
+          <MagnifyingGlassIcon style={{ height: "40px", width: "40px" }} />
+          <Bars3Icon style={{ height: "40px", width: "40px" }} />
+        </Right>
+      </NavbarContainer>
+      
+      {/* <NavMenu /> */}
+    </>
   );
 };
 

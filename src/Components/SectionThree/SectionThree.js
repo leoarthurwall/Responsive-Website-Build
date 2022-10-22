@@ -23,18 +23,11 @@ const ProjectImage = styled.div`
   background-repeat: no-repeat;
   transition: all 0.5s;
 
-
-
-
   &:hover {
     transform: scale(1.15);
     background-blend-mode: overlay;
     background-color: #ad7252;
     opacity: 0.75;
-
-
-
-
   }
 `;
 const ProjectName = styled.h2`
@@ -43,10 +36,11 @@ const ProjectName = styled.h2`
   font-family: Prompt;
   font-weight: 200;
   font-size: 3.4rem;
+  
 `;
 const ViewAll = styled.h2`
-  font-size:30px;
-  text-align:center;
+  font-size: 30px;
+  text-align: center;
   font-family: inter tight;
   margin: 59px 0;
 `;
