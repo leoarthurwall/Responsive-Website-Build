@@ -31,6 +31,7 @@ const ViewAll = styled.h2`
   font-size:32px;
   text-align:center;
   font-family: inter;
+  margin 59px 0;
 `
 
 
