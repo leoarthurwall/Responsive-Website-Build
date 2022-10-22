@@ -3,6 +3,7 @@ import "../../App.css";
 
 const ProjectContainer = styled.div`
   height: 642px;
+  max-width: 100v;
   background-position: 50%;
   background-size: cover;
   position: relative;
@@ -13,6 +14,18 @@ const ProjectContainer = styled.div`
   margin-top: 15px;
   position: relative;
   gap: 1rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+
+  const ProjectImage = styled.div`
+  
+  `
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 const ProjectClient = styled.h2`
@@ -32,8 +45,7 @@ const ViewAll = styled.h2`
   text-align:center;
   font-family: inter tight;
   margin 59px 0;
-`
-
+`;
 
 const SectionThree = () => {
   const Project = [
