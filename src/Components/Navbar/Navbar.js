@@ -93,19 +93,11 @@ const Navbar = () => {
         </Left>
         <Right>
           <Button onClick={handleSearchClick}>
-            {isSearchClicked ? (
-              <AiOutlineClose style={{ height: "40px", width: "40px" }} />
-            ) : (
-              <SlMagnifier style={{ height: "30px", width: "30px" }} />
-            )}
+            <SlMagnifier style={{ height: "30px", width: "30px" }} />
           </Button>
 
           <Button onClick={handleMenuClick}>
-            {isMenuClicked ? (
-              <AiOutlineClose style={{ height: "40px", width: "40px" }} />
-            ) : (
-              <AiOutlineMenu style={{ height: "40px", width: "40px" }} />
-            )}
+            <AiOutlineMenu style={{ height: "40px", width: "40px" }} />
           </Button>
         </Right>
       </NavbarContainer>

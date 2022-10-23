@@ -8,19 +8,24 @@ import { AiOutlineClose } from "react-icons/ai";
 
 const SearchContainer = styled.div`
   position: fixed;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 60;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  &.active {
+  ${
+    "" /* &.active {
     background-color: #9bad97;
+  } */
   }
 
-  ${'' /* .transition-enter {
+  ${
+    "" /* .transition-enter {
     opacity: 0;
   }
   .transition-enter-active {
@@ -33,7 +38,8 @@ const SearchContainer = styled.div`
   .transition-exit-active {
     opacity: 0;
     transition: opacity 1900ms linear;
-  } */}
+  } */
+  }
 `;
 
 const SearchBar = styled.input`
@@ -110,19 +116,27 @@ const NavSearch = ({
     //   onEnter={() => setIsSearchClicked(true)}
     //   onExited={() => setIsSearchClicked(false)}
     // >
-      <SearchContainer className={isSearchClicked ? "active" : ""}>
-        <NavbarContainer>
-          <Left>
-            <Name>Pearson Lloyd</Name>
-          </Left>
-          <Right>
-            <Button onClick={handleSearchClick}>
-              <AiOutlineClose style={{ height: "40px", width: "40px" }} />
-            </Button>
-          </Right>
-        </NavbarContainer>
-        <SearchBar type="text" placeholder="Search" />
-      </SearchContainer>
+    <SearchContainer
+      // className={isSearchClicked ? "active" : ""}
+      style={{
+        backgroundColor: isSearchClicked ? "#9bad97" : "#fff",
+        opacity: !isSearchClicked ? "0" : "1",
+        visibility: !isSearchClicked ? "hidden" : "visible",
+        transition: "backgroundColor all .2s",
+      }}
+    >
+      <NavbarContainer>
+        <Left>
+          <Name>Pearson Lloyd</Name>
+        </Left>
+        <Right>
+          <Button onClick={handleSearchClick}>
+            <AiOutlineClose style={{ height: "40px", width: "40px" }} />
+          </Button>
+        </Right>
+      </NavbarContainer>
+      <SearchBar type="text" placeholder="Search" />
+    </SearchContainer>
     // </CSSTransition>
   );
 };
