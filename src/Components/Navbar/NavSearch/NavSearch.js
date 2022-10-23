@@ -31,7 +31,6 @@ const SearchBar = styled.input`
 
   &:focus {
     outline: none;
-    border: none !important;
   }
   ::placeholder {
     color: #fff;
