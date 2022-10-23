@@ -15,9 +15,9 @@ const SearchContainer = styled.div`
     background-color: #9bad97;
   }
 `;
-const NavSearch = () => {
+const NavSearch = (isSearchClicked) => {
   return (
-    <SearchContainer>Search</SearchContainer>
+    <SearchContainer className={isSearchClicked ? "active" : ""}>Search</SearchContainer>
   )
 }
 
