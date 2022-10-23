@@ -37,12 +37,15 @@ const Name = styled.h2`
   margin: 0;
   font-family: inter;
 `;
-const Button = styled.div`
+const Button = styled.button`
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
   outline: inherit;
+  display: flex;
+  justify-content: center;
+  align-itmes: center;
 `;
 
 const Navbar = () => {
@@ -71,7 +74,6 @@ const Navbar = () => {
   const handleMenuClick = () => {
     setIsMenuClicked(!isMenuClicked);
   };
-  
 
   return (
     <>
@@ -80,12 +82,15 @@ const Navbar = () => {
           <Name>Pearson Lloyd</Name>
         </Left>
         <Right>
-          <SlMagnifier style={{ height: "40px", width: "40px" }} />
+          <Button>
+            <SlMagnifier style={{ height: "30px", width: "30px" }} />
+          </Button>
+
           <Button onClick={handleMenuClick}>
             {isMenuClicked ? (
-              <AiOutlineMenu style={{ height: "40px", width: "40px" }} />
-            ) : (
               <AiOutlineClose style={{ height: "40px", width: "40px" }} />
+            ) : (
+              <AiOutlineMenu style={{ height: "40px", width: "40px" }} />
             )}
           </Button>
         </Right>
