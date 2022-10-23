@@ -18,9 +18,9 @@ const NavbarContainer = styled.div`
 
   &.active {
     background-color: white;
-    padding: ${({ isMenuClicked }) => (isMenuClicked ? "2.5rem 2rem" : "0.8rem 2rem")}
+    padding: ${({ isMenuClicked }) =>
+      isMenuClicked ? "2.5rem 2rem" : "0.8rem 2rem"};
   }
- 
 `;
 
 const Left = styled.div`
@@ -79,13 +79,18 @@ const Navbar = () => {
 
   const handleSearchClick = (e) => {
     setIsSearchClicked(!isSearchClicked);
-    console.log("i've been clicked")
+    console.log("i've been clicked");
   };
   return (
     <>
-      <NavbarContainer isMenuClicked={isMenuClicked} className={isUpper ? "active" : "" || isSearchClicked ? "searchClass" : ""  }>
+      <NavbarContainer
+        isMenuClicked={isMenuClicked}
+        className={
+          isUpper ? "active" : "" || isSearchClicked ? "searchClass" : ""
+        }
+      >
         <Left>
-          <Name isMenuClicked={isMenuClicked}>Pearson Lloyd</Name>
+          <Name>Pearson Lloyd</Name>
         </Left>
         <Right>
           <Button onClick={handleSearchClick}>
@@ -107,7 +112,12 @@ const Navbar = () => {
       </NavbarContainer>
 
       {isMenuClicked && <NavMenu isMenuClicked={isMenuClicked} />}
-      {isSearchClicked && <NavSearch handleSearchClick={handleSearchClick} isSearchClicked={isSearchClicked} />}
+      {isSearchClicked && (
+        <NavSearch
+          handleSearchClick={handleSearchClick}
+          isSearchClicked={isSearchClicked}
+        />
+      )}
     </>
   );
 };
