@@ -18,7 +18,7 @@ const NavbarContainer = styled.div`
 
   &.active {
     background-color: white;
-    padding: 0.8rem 2rem;
+    padding: ${({ isMenuClicked }) => (isMenuClicked ? "2.5rem 2rem" : "0.8rem 2rem")}
   }
  
 `;
@@ -35,7 +35,7 @@ const Right = styled.div`
   gap: 1rem;
 `;
 const Name = styled.h2`
-  color: ${({ isMenuClicked }) => (isMenuClicked ? "red" : "blue")};
+  color: Black;
   margin: 0;
   font-family: inter;
 `;
@@ -83,7 +83,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <NavbarContainer className={isUpper ? "active" : "" || isSearchClicked ? "searchClass" : ""  }>
+      <NavbarContainer isMenuClicked={isMenuClicked} className={isUpper ? "active" : "" || isSearchClicked ? "searchClass" : ""  }>
         <Left>
           <Name isMenuClicked={isMenuClicked}>Pearson Lloyd</Name>
         </Left>
