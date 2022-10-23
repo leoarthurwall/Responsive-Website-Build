@@ -8,10 +8,10 @@ import { AiOutlineClose } from "react-icons/ai";
 
 const SearchContainer = styled.div`
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 
   z-index: 100;
   display: flex;
@@ -19,7 +19,7 @@ const SearchContainer = styled.div`
   align-items: center;
   flex-direction: column;
 
-  background: ${({ isSearchClicked }) =>
+  background-color: ${({ isSearchClicked }) =>
     isSearchClicked ? "#9bad97" : "#fff"};
   opacity: ${({ isSearchClicked }) => (!isSearchClicked ? "0" : "1")};
   transition: all 0.2s;
