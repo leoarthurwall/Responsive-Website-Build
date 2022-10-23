@@ -62,6 +62,7 @@ const Navbar = () => {
 
   const handleMenuClick = () => {
     setIsMenuClicked(!isMenuClicked)
+    
 
   }
 
@@ -77,7 +78,7 @@ const Navbar = () => {
         </Right>
       </NavbarContainer>
 
-      {isMenuClicked && <NavMenu />}
+      {isMenuClicked && <NavMenu isMenuClicked={isMenuClicked}/>}
     </>
   );
 };
