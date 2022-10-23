@@ -16,10 +16,16 @@ const MenuContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transition: all 1s ease-in;
-  &.active {
+
+  background-color: ${({ isMenuClicked }) =>
+    isMenuClicked && "#fff"};
+  opacity: ${({ isMenuClicked }) => (!isMenuClicked ? "0" : "1")};
+  transition: all 0.5s;
+  visibility: ${({ isMenuClicked }) =>
+      !isMenuClicked ? "hidden" : "visible"}
+  ${'' /* &.active {
     background-color: #fff;
-  }
+  } */}
 `;
 
 const MenuSubContainer = styled.div`
@@ -54,9 +60,12 @@ const IconContainer = styled.div`
   color: #9bad97;
 `;
 
-const NavMenu = ({isMenuClicked}) => {
+const NavMenu = ({ isMenuClicked }) => {
   return (
-    <MenuContainer className={isMenuClicked ? "active" : ""}>
+    <MenuContainer
+      isMenuClicked={isMenuClicked}
+      // className={isMenuClicked ? "active" : ""}
+    >
       <MenuSubContainer>
         <TextContainer>
           <MenuText>Work</MenuText>

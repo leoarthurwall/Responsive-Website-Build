@@ -22,7 +22,7 @@ const SearchContainer = styled.div`
   background-color: ${({ isSearchClicked }) =>
     isSearchClicked ? "#9bad97" : "#fff"};
   opacity: ${({ isSearchClicked }) => (!isSearchClicked ? "0" : "1")};
-  transition: all 0.2s;
+  transition: all 0.5s;
   visibility: ${({ isSearchClicked }) =>
       !isSearchClicked ? "hidden" : "visible"}
     ${
