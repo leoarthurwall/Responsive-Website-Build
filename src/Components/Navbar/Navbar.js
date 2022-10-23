@@ -35,7 +35,7 @@ const Right = styled.div`
   gap: 1rem;
 `;
 const Name = styled.h2`
-  color: black;
+  color: ${({ isMenuClicked }) => (isMenuClicked ? "red" : "blue")};
   margin: 0;
   font-family: inter;
 `;
@@ -85,7 +85,7 @@ const Navbar = () => {
     <>
       <NavbarContainer className={isUpper ? "active" : "" || isSearchClicked ? "searchClass" : ""  }>
         <Left>
-          <Name>Pearson Lloyd</Name>
+          <Name isMenuClicked={isMenuClicked}>Pearson Lloyd</Name>
         </Left>
         <Right>
           <Button onClick={handleSearchClick}>
