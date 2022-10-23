@@ -93,9 +93,7 @@ const Navbar = () => {
         </Left>
         <Right>
           <Button onClick={handleSearchClick}>
-            
-              <SlMagnifier style={{ height: "30px", width: "30px" }} />
-           
+            <SlMagnifier style={{ height: "30px", width: "30px" }} />
           </Button>
 
           <Button onClick={handleMenuClick}>

@@ -18,14 +18,20 @@ const SearchContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  ${
-    "" /* &.active {
+
+  background: ${({ isSearchClicked }) =>
+    isSearchClicked ? "#9bad97" : "#fff"};
+  opacity: ${({ isSearchClicked }) => (!isSearchClicked ? "0" : "1")};
+  transition: all 0.2s;
+  visibility: ${({ isSearchClicked }) =>
+      !isSearchClicked ? "hidden" : "visible"}
+    ${
+      "" /* &.active {
     background-color: #9bad97;
   } */
-  }
-
-  ${
-    "" /* .transition-enter {
+    }
+    ${
+      "" /* .transition-enter {
     opacity: 0;
   }
   .transition-enter-active {
@@ -39,7 +45,7 @@ const SearchContainer = styled.div`
     opacity: 0;
     transition: opacity 1900ms linear;
   } */
-  }
+    };
 `;
 
 const SearchBar = styled.input`
@@ -117,11 +123,8 @@ const NavSearch = ({
     //   onExited={() => setIsSearchClicked(false)}
     // >
     <SearchContainer
+      isSearchClicked={isSearchClicked}
       // className={isSearchClicked ? "active" : ""}
-      style={{
-        background: isSearchClicked ? "#9bad97" : "#fff",
-        
-      }}
     >
       <NavbarContainer>
         <Left>
