@@ -54,7 +54,7 @@ const IconContainer = styled.div`
   color: #9bad97;
 `;
 
-const NavMenu = (isMenuClicked) => {
+const NavMenu = ({isMenuClicked}) => {
   return (
     <MenuContainer className={isMenuClicked ? "active" : ""}>
       <MenuSubContainer>

@@ -20,6 +20,7 @@ const NavbarContainer = styled.div`
     background-color: white;
     padding: 0.8rem 2rem;
   }
+ 
 `;
 
 const Left = styled.div`
@@ -76,12 +77,13 @@ const Navbar = () => {
     setIsMenuClicked(!isMenuClicked);
   };
 
-  const handleSearchClick = () => {
+  const handleSearchClick = (e) => {
     setIsSearchClicked(!isSearchClicked);
+    console.log("i've been clicked")
   };
   return (
     <>
-      <NavbarContainer className={isUpper ? "active" : ""}>
+      <NavbarContainer className={isUpper ? "active" : "" || isSearchClicked ? "searchClass" : ""  }>
         <Left>
           <Name>Pearson Lloyd</Name>
         </Left>
@@ -105,7 +107,7 @@ const Navbar = () => {
       </NavbarContainer>
 
       {isMenuClicked && <NavMenu isMenuClicked={isMenuClicked} />}
-      {isSearchClicked && <NavSearch isSearchClicked={isSearchClicked} />}
+      {isSearchClicked && <NavSearch handleSearchClick={handleSearchClick} isSearchClicked={isSearchClicked} />}
     </>
   );
 };
