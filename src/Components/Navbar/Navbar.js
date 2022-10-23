@@ -107,13 +107,12 @@ const Navbar = () => {
       </NavbarContainer>
 
       {isMenuClicked && <NavMenu isMenuClicked={isMenuClicked} />}
-      {isSearchClicked && (
-        <NavSearch
+    
+      <NavSearch
           handleSearchClick={handleSearchClick}
           isSearchClicked={isSearchClicked}
           setIsSearchClicked={setIsSearchClicked}
         />
-      )}
     </>
   );
 };
