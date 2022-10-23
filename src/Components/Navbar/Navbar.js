@@ -81,7 +81,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <NavbarContainer className={isUpper ? "active" : ""}>
+      {/* <NavbarContainer className={isUpper ? "active" : ""}>
         <Left>
           <Name>Pearson Lloyd</Name>
         </Left>
@@ -102,10 +102,32 @@ const Navbar = () => {
             )}
           </Button>
         </Right>
-      </NavbarContainer>
+      </NavbarContainer> */}
 
-      {isMenuClicked && <NavMenu isMenuClicked={isMenuClicked} />}
-      {isSearchClicked && <NavSearch isSearchClicked={isSearchClicked} />}
+      {isMenuClicked ? <NavMenu isMenuClicked={isMenuClicked} /> :  <NavbarContainer className={isUpper ? "active" : ""}>
+        <Left>
+          <Name>Pearson Lloyd</Name>
+        </Left>
+        <Right>
+          <Button onClick={handleSearchClick}>
+            {isSearchClicked ? (
+              <AiOutlineClose style={{ height: "40px", width: "40px" }} />
+            ) : (
+              <SlMagnifier style={{ height: "30px", width: "30px" }} />
+            )}
+          </Button>
+
+          <Button onClick={handleMenuClick}>
+            {isMenuClicked ? (
+              <AiOutlineClose style={{ height: "40px", width: "40px" }} />
+            ) : (
+              <AiOutlineMenu style={{ height: "40px", width: "40px" }} />
+            )}
+          </Button>
+        </Right>
+      </NavbarContainer>}
+      
+      {/* {isSearchClicked && <NavSearch isSearchClicked={isSearchClicked} />} */}
     </>
   );
 };
