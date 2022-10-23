@@ -119,10 +119,8 @@ const NavSearch = ({
     <SearchContainer
       // className={isSearchClicked ? "active" : ""}
       style={{
-        backgroundColor: isSearchClicked ? "#9bad97" : "#fff",
-        opacity: !isSearchClicked ? "0" : "1",
-        visibility: !isSearchClicked ? "hidden" : "visible",
-        transition: "backgroundColor all .2s",
+        background: isSearchClicked ? "#9bad97" : "#fff",
+        
       }}
     >
       <NavbarContainer>
