@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import { MagnifyingGlassIcon, Bars3Icon } from "@heroicons/react/24/solid";
 import { useState, useEffect } from "react";
 import NavMenu from "./NavMenu/NavMenu";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { SlMagnifier } from "react-icons/sl";
 
 const NavbarContainer = styled.div`
   position: fixed;
@@ -36,12 +37,19 @@ const Name = styled.h2`
   margin: 0;
   font-family: inter;
 `;
+const Button = styled.div`
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: inherit;
+`;
 
 const Navbar = () => {
   const [offset, setOffset] = useState(0);
   const [isUpper, setIsUpper] = useState(false);
   const [isMenuClicked, setIsMenuClicked] = useState(false);
-
+  const [isSearchClicked, setIsSearchClicked] = useState(false);
 
   const handleScroll = () => setOffset(window.pageYOffset);
 
@@ -61,10 +69,9 @@ const Navbar = () => {
   }, [offset]);
 
   const handleMenuClick = () => {
-    setIsMenuClicked(!isMenuClicked)
-    
-
-  }
+    setIsMenuClicked(!isMenuClicked);
+  };
+  
 
   return (
     <>
@@ -73,12 +80,18 @@ const Navbar = () => {
           <Name>Pearson Lloyd</Name>
         </Left>
         <Right>
-          <MagnifyingGlassIcon style={{ height: "40px", width: "40px" }} />
-          <Bars3Icon style={{ height: "40px", width: "40px" }} onClick={handleMenuClick}/>
+          <SlMagnifier style={{ height: "40px", width: "40px" }} />
+          <Button onClick={handleMenuClick}>
+            {isMenuClicked ? (
+              <AiOutlineMenu style={{ height: "40px", width: "40px" }} />
+            ) : (
+              <AiOutlineClose style={{ height: "40px", width: "40px" }} />
+            )}
+          </Button>
         </Right>
       </NavbarContainer>
 
-      {isMenuClicked && <NavMenu isMenuClicked={isMenuClicked}/>}
+      {isMenuClicked && <NavMenu isMenuClicked={isMenuClicked} />}
     </>
   );
 };
