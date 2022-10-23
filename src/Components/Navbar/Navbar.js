@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import NavMenu from "./NavMenu/NavMenu";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { SlMagnifier } from "react-icons/sl";
+import NavSearch from "./NavSearch/NavSearch";
 
 const NavbarContainer = styled.div`
   position: fixed;
@@ -75,6 +76,9 @@ const Navbar = () => {
     setIsMenuClicked(!isMenuClicked);
   };
 
+  const handleSearchClick = () => {
+    setIsSearchClicked(!isSearchClicked);
+  };
   return (
     <>
       <NavbarContainer className={isUpper ? "active" : ""}>
@@ -82,7 +86,7 @@ const Navbar = () => {
           <Name>Pearson Lloyd</Name>
         </Left>
         <Right>
-          <Button>
+          <Button onClick={handleSearchClick}>
             <SlMagnifier style={{ height: "30px", width: "30px" }} />
           </Button>
 
@@ -97,6 +101,7 @@ const Navbar = () => {
       </NavbarContainer>
 
       {isMenuClicked && <NavMenu isMenuClicked={isMenuClicked} />}
+      {isSearchClicked && <NavSearch isSearchClicked={isSearchClicked} />}
     </>
   );
 };
