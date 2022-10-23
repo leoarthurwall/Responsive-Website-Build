@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
-import NavMenu from "./NavMenu/NavMenu";
+import NavMenu from "../NavMenu/NavMenu";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { SlMagnifier } from "react-icons/sl";
-import NavSearch from "./NavSearch/NavSearch";
+import NavSearch from "../NavSearch/NavSearch";
 
 const NavbarContainer = styled.div`
   position: fixed;
