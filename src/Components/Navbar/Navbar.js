@@ -40,6 +40,8 @@ const Name = styled.h2`
 const Navbar = () => {
   const [offset, setOffset] = useState(0);
   const [isUpper, setIsUpper] = useState(false);
+  const [isMenuClicked, setIsMenuClicked] = useState(false);
+
 
   const handleScroll = () => setOffset(window.pageYOffset);
 
@@ -58,6 +60,11 @@ const Navbar = () => {
     }
   }, [offset]);
 
+  const handleMenuClick = () => {
+    setIsMenuClicked(!isMenuClicked)
+
+  }
+
   return (
     <>
       <NavbarContainer className={isUpper ? "active" : ""}>
@@ -66,11 +73,11 @@ const Navbar = () => {
         </Left>
         <Right>
           <MagnifyingGlassIcon style={{ height: "40px", width: "40px" }} />
-          <Bars3Icon style={{ height: "40px", width: "40px" }} />
+          <Bars3Icon style={{ height: "40px", width: "40px" }} onClick={handleMenuClick}/>
         </Right>
       </NavbarContainer>
-      
-      {/* <NavMenu /> */}
+
+      {isMenuClicked && <NavMenu />}
     </>
   );
 };
