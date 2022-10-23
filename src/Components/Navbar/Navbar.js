@@ -79,7 +79,6 @@ const Navbar = () => {
 
   const handleSearchClick = (e) => {
     setIsSearchClicked(!isSearchClicked);
-    console.log("i've been clicked");
   };
   return (
     <>
@@ -116,6 +115,7 @@ const Navbar = () => {
         <NavSearch
           handleSearchClick={handleSearchClick}
           isSearchClicked={isSearchClicked}
+          setIsSearchClicked={setIsSearchClicked}
         />
       )}
     </>

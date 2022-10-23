@@ -1,5 +1,10 @@
 import styled from "styled-components";
 import { AiOutlineClose } from "react-icons/ai";
+// import {
+//   CSSTransition,
+//   Transition,
+//   TransitionGroup,
+// } from "react-transition-group";
 
 const SearchContainer = styled.div`
   position: fixed;
@@ -11,10 +16,24 @@ const SearchContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transition: all 1s ease-in;
   &.active {
     background-color: #9bad97;
   }
+
+  ${'' /* .transition-enter {
+    opacity: 0;
+  }
+  .transition-enter-active {
+    opacity: 1;
+    transition: opacity 1000ms linear;
+  }
+  .transition-exit {
+    opacity: 1;
+  }
+  .transition-exit-active {
+    opacity: 0;
+    transition: opacity 1900ms linear;
+  } */}
 `;
 
 const SearchBar = styled.input`
@@ -46,12 +65,6 @@ const NavbarContainer = styled.div`
   width: 100%;
   padding: 2.5rem 2rem;
   box-sizing: border-box;
-  transition: 0.5s ease;
-
-  &.active {
-    background-color: white;
-    padding: 0.8rem 2rem;
-  }
 `;
 
 const Left = styled.div`
@@ -70,7 +83,6 @@ const Name = styled.h2`
   margin: 0;
   font-family: inter;
   color: white;
-
 `;
 const Button = styled.button`
   background: none;
@@ -83,21 +95,35 @@ const Button = styled.button`
   align-itmes: center;
   color: white;
 `;
-const NavSearch = ({isSearchClicked, handleSearchClick}) => {
+const NavSearch = ({
+  isSearchClicked,
+  setIsSearchClicked,
+  handleSearchClick,
+}) => {
   return (
-    <SearchContainer className={isSearchClicked ? "active" : ""}>
-      <NavbarContainer>
-        <Left>
-          <Name>Pearson Lloyd</Name>
-        </Left>
-        <Right>
-          <Button onClick={handleSearchClick}>
-            <AiOutlineClose style={{ height: "40px", width: "40px" }} />
-          </Button>
-        </Right>
-      </NavbarContainer>
-      <SearchBar type="text" placeholder="Search" />
-    </SearchContainer>
+    // <CSSTransition
+    //   in={isSearchClicked}
+    //   timeout={1000}
+    //   appear={true}
+    //   classNames="transition"
+    //   unmountOnExit
+    //   onEnter={() => setIsSearchClicked(true)}
+    //   onExited={() => setIsSearchClicked(false)}
+    // >
+      <SearchContainer className={isSearchClicked ? "active" : ""}>
+        <NavbarContainer>
+          <Left>
+            <Name>Pearson Lloyd</Name>
+          </Left>
+          <Right>
+            <Button onClick={handleSearchClick}>
+              <AiOutlineClose style={{ height: "40px", width: "40px" }} />
+            </Button>
+          </Right>
+        </NavbarContainer>
+        <SearchBar type="text" placeholder="Search" />
+      </SearchContainer>
+    // </CSSTransition>
   );
 };
 
