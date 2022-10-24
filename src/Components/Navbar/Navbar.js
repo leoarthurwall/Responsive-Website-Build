@@ -20,6 +20,9 @@ const NavbarContainer = styled.div`
     background-color: white;
     padding: ${({ isMenuClicked }) =>
       isMenuClicked ? "2.5rem 2rem" : "0.8rem 2rem"};
+    @media (max-width: 768px) {
+      padding: 0.8rem 2rem;
+    }
   }
 `;
 
@@ -39,7 +42,6 @@ const Name = styled.h2`
   margin: 0;
   font-family: inter;
   cursor: pointer;
-
 `;
 const Button = styled.button`
   background: none;

@@ -83,6 +83,9 @@ const NavbarContainer = styled.div`
   width: 100%;
   padding: 2.5rem 2rem;
   box-sizing: border-box;
+  @media (max-width: 768px) {
+      padding: 0.8rem 2rem;
+    }
 `;
 
 const Left = styled.div`
