@@ -5,8 +5,8 @@ import {
   GrTwitter,
   GrLinkedinOption,
 } from "react-icons/gr";
-import { getByDisplayValue } from "@testing-library/react";
-import { AiFillExclamationCircle } from "react-icons/ai";
+// import { getByDisplayValue } from "@testing-library/react";
+// import { AiFillExclamationCircle } from "react-icons/ai";
 
 const MenuContainer = styled.div`
   position: fixed;
