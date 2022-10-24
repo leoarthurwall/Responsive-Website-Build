@@ -70,11 +70,23 @@ const IconContainer = styled.div`
   transform: translate(-50%, -50%);
   margin: 0 auto;
   color: #9bad97;
+
+  @media (max-width: 768px) {
+    gap: 0.5rem;
+
+    }
 `;
 
 const IconIndividualContainer = styled.div`
-  height: 100%;
-  width: 100%;
+  height: 35px;
+  width: 35px;
+
+  &:first-child {
+    height: 30px;
+    width: 30px;
+    padding-right: 0.7rem;
+  }
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,8 +96,20 @@ const IconIndividualContainer = styled.div`
   &:hover {
     color: #000;
   }
+
+  @media (max-width: 768px) {
+    height: 16px;
+    width: 16px;
+    &:first-child {
+      height: 14px;
+      width: 14px;
+      padding-right: 0.4rem;
+
+    }
+  }
 `;
-const NavMenu = ({ isMenuClicked }) => {
+
+const NavMenu = ({ isMenuClicked, className }) => {
   return (
     <MenuContainer isMenuClicked={isMenuClicked}>
       <MenuSubContainer>
@@ -98,16 +122,16 @@ const NavMenu = ({ isMenuClicked }) => {
         </TextContainer>
         <IconContainer>
           <IconIndividualContainer>
-            <GrInstagram style={{ "margin-right": "0.7rem" }} size={30} />
+            <GrInstagram size="auto" />
           </IconIndividualContainer>
           <IconIndividualContainer>
-            <GrTwitter size={35} />
+            <GrTwitter size="auto" />
           </IconIndividualContainer>
           <IconIndividualContainer>
-            <GrFacebookOption size={35} />
+            <GrFacebookOption size="auto" />
           </IconIndividualContainer>
           <IconIndividualContainer>
-            <GrLinkedinOption size={35} />
+            <GrLinkedinOption size="auto" />
           </IconIndividualContainer>
         </IconContainer>
       </MenuSubContainer>
