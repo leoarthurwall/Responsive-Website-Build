@@ -5,6 +5,8 @@ import {
   GrTwitter,
   GrLinkedinOption,
 } from "react-icons/gr";
+import { getByDisplayValue } from "@testing-library/react";
+import { AiFillExclamationCircle } from "react-icons/ai";
 
 const MenuContainer = styled.div`
   position: fixed;
@@ -16,7 +18,8 @@ const MenuContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transform: ${({ isMenuClicked }) => (!isMenuClicked ? "scale(1.1)" : "scale(1)")};
+  transform: ${({ isMenuClicked }) =>
+    !isMenuClicked ? "scale(1.1)" : "scale(1)"};
   background-color: ${({ isMenuClicked }) => isMenuClicked && "#fff"};
   opacity: ${({ isMenuClicked }) => (!isMenuClicked ? "0" : "1")};
   transition: all 0.5s;
@@ -43,10 +46,12 @@ const MenuText = styled.h2`
   text-align: center;
   font-family: inter tight;
   margin: 0;
-  transition: color .5s;
+  transition: color 0.5s;
+
+  cursor: pointer;
 
   &:hover {
-    color: #9bad97
+    color: #9bad97;
   }
 `;
 
@@ -60,9 +65,21 @@ const IconContainer = styled.div`
   transform: translate(-50%, -50%);
   margin: 0 auto;
   color: #9bad97;
-  
 `;
 
+const IconIndividualContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    color: #000;
+  }
+`;
 const NavMenu = ({ isMenuClicked }) => {
   return (
     <MenuContainer isMenuClicked={isMenuClicked}>
@@ -75,10 +92,18 @@ const NavMenu = ({ isMenuClicked }) => {
           <MenuText>Contact</MenuText>
         </TextContainer>
         <IconContainer>
-          <GrInstagram style={{ "margin-right": "0.7rem" }} size={30} />
-          <GrTwitter size={35} />
-          <GrFacebookOption size={35} />
-          <GrLinkedinOption size={35} />
+          <IconIndividualContainer>
+            <GrInstagram style={{ "margin-right": "0.7rem" }} size={30} />
+          </IconIndividualContainer>
+          <IconIndividualContainer>
+            <GrTwitter size={35} />
+          </IconIndividualContainer>
+          <IconIndividualContainer>
+            <GrFacebookOption size={35} />
+          </IconIndividualContainer>
+          <IconIndividualContainer>
+            <GrLinkedinOption size={35} />
+          </IconIndividualContainer>
         </IconContainer>
       </MenuSubContainer>
     </MenuContainer>
