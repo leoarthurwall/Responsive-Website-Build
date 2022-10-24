@@ -38,6 +38,9 @@ const ProjectName = styled.h2`
   font-family: Prompt;
   font-weight: 200;
   font-size: 3.4rem;
+  @media (max-width: 1024px) {
+    font-size: 25px;
+  }
 `;
 const ViewAllContainer = styled.div`
 display:flex;
