@@ -26,12 +26,18 @@ const FooterSubContainerLast = styled.div`
   width: 100%;
   flex-direction: column;
   text-align: left;
-
 `;
 const FooterHeader = styled.h2`
   font-family: inter;
   color: #fff;
   margin: 0;
+
+  width: fit-content;
+  transition: color 0.5s;
+  cursor: pointer;
+  &:hover {
+    color: #c8d1c6;
+  }
 `;
 
 const UList = styled.ul`
@@ -43,14 +49,19 @@ const UList = styled.ul`
   font-size: 18px;
 `;
 const ListItem = styled.li`
-width: fit-content;
   font-family: inter tight;
   color: #fff;
-  transition: color .5s;
+
+  width: fit-content;
+  transition: color 0.5s;
   cursor: pointer;
-   &:hover {
-    color: #C8D1C6;
-   }
+  &:hover {
+    color: #c8d1c6;
+  }
+`;
+const ListNoHover = styled.li`
+  font-family: inter tight;
+  color: #fff;
 `;
 const IconContainer = styled.div`
   margin-top: 25px;
@@ -68,7 +79,7 @@ const Footer = () => {
         <FooterHeader>Pearson Lloyd</FooterHeader>
       </FooterSubContainer>
       <FooterSubContainer>
-        <UList >
+        <UList>
           <ListItem>Work</ListItem>
           <ListItem>News</ListItem>
           <ListItem>Recognition</ListItem>
@@ -79,8 +90,8 @@ const Footer = () => {
       </FooterSubContainer>
       <FooterSubContainer>
         <UList>
-          <ListItem>1-3 Yorkton Street</ListItem>
-          <ListItem>London E2 8NH</ListItem>
+          <ListNoHover>1-3 Yorkton Street</ListNoHover>
+          <ListNoHover>London E2 8NH</ListNoHover>
           <ListItem> +44 (0)20 7033 4440 </ListItem>
           <ListItem>Yorkton Workshops</ListItem>
           <ListItem>info@pearsonlloyd.com</ListItem>
@@ -88,11 +99,11 @@ const Footer = () => {
       </FooterSubContainer>
       <FooterSubContainerLast>
         <UList>
-          <ListItem> Pearson Lloyd Design Ltd</ListItem>
-          <ListItem>Registered No 4579758</ListItem>
+          <ListNoHover> Pearson Lloyd Design Ltd</ListNoHover>
+          <ListNoHover>Registered No 4579758</ListNoHover>
         </UList>
         <IconContainer>
-          <GrInstagram  style={{"margin-right": "0.4rem"}} size={22} />
+          <GrInstagram style={{ "margin-right": "0.4rem" }} size={22} />
           <GrTwitter size={24} />
           <GrFacebookOption size={24} />
           <GrLinkedinOption size={24} />
