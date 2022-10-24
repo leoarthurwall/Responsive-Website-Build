@@ -7,11 +7,11 @@ body {
   text-align: center;
   -webkit-font-smoothing: antialiased;
 
-  -webkit-animation: fadein 5s ease-in; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 5s ease-in; /* Firefox < 16 */
-   -ms-animation: fadein 5s ease-in; /* Internet Explorer */
-    -o-animation: fadein 5s ease-in; /* Opera < 12.1 */
-       animation: fadein 5s ease-in;
+  -webkit-animation: fadein 3s ease-in; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 3s ease-in; /* Firefox < 16 */
+   -ms-animation: fadein 3s ease-in; /* Internet Explorer */
+    -o-animation: fadein 3s ease-in; /* Opera < 12.1 */
+       animation: fadein 3s ease-in;
 }
 
 @keyframes fadein {
