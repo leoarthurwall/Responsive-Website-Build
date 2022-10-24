@@ -16,7 +16,7 @@ const NavbarContainer = styled.div`
   box-sizing: border-box;
   transition: 0.5s ease;
   @media (max-width: 768px) {
-      padding: 0.8rem 2rem;
+      padding: 0.8rem 17.5px;
     }
 
   &.active {
@@ -24,8 +24,7 @@ const NavbarContainer = styled.div`
     padding: ${({ isMenuClicked }) =>
       isMenuClicked ? "2.5rem 2rem" : "0.8rem 2rem"};
     @media (max-width: 768px) {
-      padding: 0.8rem 2rem;
-    }
+      padding: 0.8rem 17.5px;    }
   }
 `;
 

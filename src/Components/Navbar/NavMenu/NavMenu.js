@@ -109,7 +109,7 @@ const IconIndividualContainer = styled.div`
   }
 `;
 
-const NavMenu = ({ isMenuClicked, className }) => {
+const NavMenu = ({ isMenuClicked }) => {
   return (
     <MenuContainer isMenuClicked={isMenuClicked}>
       <MenuSubContainer>

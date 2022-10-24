@@ -84,8 +84,8 @@ const NavbarContainer = styled.div`
   padding: 2.5rem 2rem;
   box-sizing: border-box;
   @media (max-width: 768px) {
-      padding: 0.8rem 2rem;
-    }
+    padding: 0.8rem 17.5px;
+  }
 `;
 
 const Left = styled.div`
@@ -105,8 +105,6 @@ const Name = styled.h2`
   font-family: inter;
   color: white;
   cursor: pointer;
-
-
 `;
 const Button = styled.button`
   background: none;
