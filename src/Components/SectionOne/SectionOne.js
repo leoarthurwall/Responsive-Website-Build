@@ -21,6 +21,10 @@ const SectionOne = () => {
     font-family: inter;
     font-weight: 600;
     font-size: 8.4rem;
+    @media (max-width: 1024px) {
+    font-size: 42px;
+  }
+
   `;
   return (
     <SectionOneImage>
