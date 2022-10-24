@@ -71,6 +71,17 @@ const IconContainer = styled.div`
   color: #fff;
   gap: 0.1rem;
 `;
+const IconIndividualContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    color: #c8d1c6;
+  }
+`;
 
 const Footer = () => {
   return (
@@ -103,10 +114,18 @@ const Footer = () => {
           <ListNoHover>Registered No 4579758</ListNoHover>
         </UList>
         <IconContainer>
-          <GrInstagram style={{ "margin-right": "0.4rem" }} size={22} />
-          <GrTwitter size={24} />
-          <GrFacebookOption size={24} />
-          <GrLinkedinOption size={24} />
+          <IconIndividualContainer>
+            <GrInstagram style={{ "margin-right": "0.4rem" }} size={22} />
+          </IconIndividualContainer>
+          <IconIndividualContainer>
+            <GrTwitter size={24} />
+          </IconIndividualContainer>
+          <IconIndividualContainer>
+            <GrFacebookOption size={24} />
+          </IconIndividualContainer>
+          <IconIndividualContainer>
+            <GrLinkedinOption size={24} />
+          </IconIndividualContainer>
         </IconContainer>
       </FooterSubContainerLast>
     </FooterContainer>
