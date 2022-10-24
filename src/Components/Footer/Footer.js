@@ -43,8 +43,14 @@ const UList = styled.ul`
   font-size: 18px;
 `;
 const ListItem = styled.li`
+width: fit-content;
   font-family: inter tight;
   color: #fff;
+  transition: color .5s;
+  cursor: pointer;
+   &:hover {
+    color: #C8D1C6;
+   }
 `;
 const IconContainer = styled.div`
   margin-top: 25px;
