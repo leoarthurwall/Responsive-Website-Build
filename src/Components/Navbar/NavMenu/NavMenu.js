@@ -37,10 +37,17 @@ const TextContainer = styled.div`
 `;
 const MenuText = styled.h2`
   font-size: 60px;
+  color: #000;
+
   font-weight: 600;
   text-align: center;
   font-family: inter tight;
   margin: 0;
+  transition: color .5s;
+
+  &:hover {
+    color: #9bad97
+  }
 `;
 
 const IconContainer = styled.div`
@@ -53,6 +60,7 @@ const IconContainer = styled.div`
   transform: translate(-50%, -50%);
   margin: 0 auto;
   color: #9bad97;
+  
 `;
 
 const NavMenu = ({ isMenuClicked }) => {
