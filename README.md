@@ -12,9 +12,9 @@ Attention to detail was high up on my list with regards to styles, layout, anima
 
 Check out both websites and have a play around with the main page & nav bar. Please note that my focus was no the main page, the navbar menu and navbar search. Therefore I haven't added urls to link through on projects etc. With that in mind, here are the links to: 
 
-[My website](#https://responsive-website-lw.netlify.app/)
+[My website](https://responsive-website-lw.netlify.app/)
 
-[Original website](#https://pearsonlloyd.com/)
+[Original website](https://pearsonlloyd.com/)
 
 ## A few more shots
 
