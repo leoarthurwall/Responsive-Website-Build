@@ -95,6 +95,8 @@ const Name = styled.h2`
   margin: 0;
   font-family: inter;
   color: white;
+  cursor: pointer;
+
 `;
 const Button = styled.button`
   background: none;

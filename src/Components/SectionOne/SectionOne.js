@@ -12,7 +12,8 @@ const SectionOne = () => {
     justify-content: center;
     align-items: center;
 
-`;
+    cursor: pointer;
+  `;
 
   const Header = styled.h1`
     width: 90%;

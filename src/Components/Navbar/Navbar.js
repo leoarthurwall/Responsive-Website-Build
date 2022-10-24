@@ -38,6 +38,8 @@ const Name = styled.h2`
   color: Black;
   margin: 0;
   font-family: inter;
+  cursor: pointer;
+
 `;
 const Button = styled.button`
   background: none;

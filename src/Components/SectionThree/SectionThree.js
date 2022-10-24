@@ -13,6 +13,8 @@ const ProjectContainer = styled.div`
   margin-top: 15px;
   position: relative;
   gap: 1rem;
+
+  cursor: pointer;
 `;
 
 const ProjectImage = styled.div`
