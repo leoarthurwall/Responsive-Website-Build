@@ -36,13 +36,25 @@ const ProjectName = styled.h2`
   font-family: Prompt;
   font-weight: 200;
   font-size: 3.4rem;
-  
 `;
+const ViewAllContainer = styled.div`
+display:flex;
+justify-content: center;
+align-items: center;
+margin: 59px 0;
+
+`
 const ViewAll = styled.h2`
   font-size: 30px;
-  text-align: center;
   font-family: inter tight;
-  margin: 59px 0;
+  color: #000;
+  width: fit-content;
+  transition: color 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    color: #9bad97;
+  }
 `;
 
 const SectionThree = () => {
@@ -94,7 +106,9 @@ const SectionThree = () => {
           </ProjectContainer>
         );
       })}
-      <ViewAll>View all</ViewAll>
+      <ViewAllContainer>
+        <ViewAll>View all</ViewAll>
+      </ViewAllContainer>
     </>
   );
 };
