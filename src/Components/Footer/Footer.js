@@ -6,12 +6,19 @@ import {
   GrLinkedinOption,
 } from "react-icons/gr";
 
+const FooterBackground = styled.div`
+  width: 100vw;
+  background-color: #9bad97;
+`;
+
 const FooterContainer = styled.div`
   display: flex;
-  justify-content: center;
-  background-color: #9bad97;
-  width: 100vw;
-  padding: 37px 10rem 133px 10rem;
+  justify-content: space-between;
+
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 37px 2.9rem 133px 2.9rem;
   box-sizing: border-box;
 `;
 const FooterSubContainer = styled.div`
@@ -85,50 +92,52 @@ const IconIndividualContainer = styled.div`
 
 const Footer = () => {
   return (
-    <FooterContainer>
-      <FooterSubContainer>
-        <FooterHeader>Pearson Lloyd</FooterHeader>
-      </FooterSubContainer>
-      <FooterSubContainer>
-        <UList>
-          <ListItem>Work</ListItem>
-          <ListItem>News</ListItem>
-          <ListItem>Recognition</ListItem>
-          <ListItem>Press</ListItem>
-          <ListItem>Jobs</ListItem>
-          <ListItem>Contact</ListItem>
-        </UList>
-      </FooterSubContainer>
-      <FooterSubContainer>
-        <UList>
-          <ListNoHover>1-3 Yorkton Street</ListNoHover>
-          <ListNoHover>London E2 8NH</ListNoHover>
-          <ListItem> +44 (0)20 7033 4440 </ListItem>
-          <ListItem>Yorkton Workshops</ListItem>
-          <ListItem>info@pearsonlloyd.com</ListItem>
-        </UList>
-      </FooterSubContainer>
-      <FooterSubContainerLast>
-        <UList>
-          <ListNoHover> Pearson Lloyd Design Ltd</ListNoHover>
-          <ListNoHover>Registered No 4579758</ListNoHover>
-        </UList>
-        <IconContainer>
-          <IconIndividualContainer>
-            <GrInstagram style={{ "margin-right": "0.4rem" }} size={22} />
-          </IconIndividualContainer>
-          <IconIndividualContainer>
-            <GrTwitter size={24} />
-          </IconIndividualContainer>
-          <IconIndividualContainer>
-            <GrFacebookOption size={24} />
-          </IconIndividualContainer>
-          <IconIndividualContainer>
-            <GrLinkedinOption size={24} />
-          </IconIndividualContainer>
-        </IconContainer>
-      </FooterSubContainerLast>
-    </FooterContainer>
+    <FooterBackground>
+      <FooterContainer>
+        <FooterSubContainer>
+          <FooterHeader>Pearson Lloyd</FooterHeader>
+        </FooterSubContainer>
+        <FooterSubContainer>
+          <UList>
+            <ListItem>Work</ListItem>
+            <ListItem>News</ListItem>
+            <ListItem>Recognition</ListItem>
+            <ListItem>Press</ListItem>
+            <ListItem>Jobs</ListItem>
+            <ListItem>Contact</ListItem>
+          </UList>
+        </FooterSubContainer>
+        <FooterSubContainer>
+          <UList>
+            <ListNoHover>1-3 Yorkton Street</ListNoHover>
+            <ListNoHover>London E2 8NH</ListNoHover>
+            <ListItem> +44 (0)20 7033 4440 </ListItem>
+            <ListItem>Yorkton Workshops</ListItem>
+            <ListItem>info@pearsonlloyd.com</ListItem>
+          </UList>
+        </FooterSubContainer>
+        <FooterSubContainerLast>
+          <UList>
+            <ListNoHover> Pearson Lloyd Design Ltd</ListNoHover>
+            <ListNoHover>Registered No 4579758</ListNoHover>
+          </UList>
+          <IconContainer>
+            <IconIndividualContainer>
+              <GrInstagram style={{ "margin-right": "0.4rem" }} size={22} />
+            </IconIndividualContainer>
+            <IconIndividualContainer>
+              <GrTwitter size={24} />
+            </IconIndividualContainer>
+            <IconIndividualContainer>
+              <GrFacebookOption size={24} />
+            </IconIndividualContainer>
+            <IconIndividualContainer>
+              <GrLinkedinOption size={24} />
+            </IconIndividualContainer>
+          </IconContainer>
+        </FooterSubContainerLast>
+      </FooterContainer>
+    </FooterBackground>
   );
 };
 
