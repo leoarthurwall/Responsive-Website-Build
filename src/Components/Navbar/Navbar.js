@@ -15,6 +15,9 @@ const NavbarContainer = styled.div`
   padding: 2.5rem 2rem;
   box-sizing: border-box;
   transition: 0.5s ease;
+  @media (max-width: 768px) {
+      padding: 0.8rem 2rem;
+    }
 
   &.active {
     background-color: white;
