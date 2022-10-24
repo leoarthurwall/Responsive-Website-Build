@@ -66,6 +66,12 @@ const SearchBar = styled.input`
   ::placeholder {
     color: #fff;
   }
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    height: 30px;
+    padding: 0 5px;
+  }
 `;
 
 const NavbarContainer = styled.div`
