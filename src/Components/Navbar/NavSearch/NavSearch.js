@@ -97,6 +97,7 @@ const Name = styled.h2`
   color: white;
   cursor: pointer;
 
+
 `;
 const Button = styled.button`
   background: none;

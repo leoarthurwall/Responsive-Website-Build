@@ -20,6 +20,11 @@ const FooterContainer = styled.div`
   margin-right: auto;
   padding: 37px 2.9rem 133px 2.9rem;
   box-sizing: border-box;
+
+  @media (max-width: 950px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
 `;
 const FooterSubContainer = styled.div`
   display: flex;
