@@ -24,6 +24,8 @@ const FooterContainer = styled.div`
   @media (max-width: 950px) {
     flex-direction: column;
     gap: 1rem;
+    padding: 35px 17.5px 35px 17.5px;
+
   }
 `;
 const FooterSubContainer = styled.div`
